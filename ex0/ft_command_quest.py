@@ -17,3 +17,6 @@ def main() -> None:
 
 
     print("Total arguments: {len(args)}")
+
+
+main()
