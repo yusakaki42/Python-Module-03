@@ -30,4 +30,27 @@ def main() -> None:
     }
 
     for name, achievements in players.items():
-        print(f"Player {name}: {{achievements}}")
+        print(f"Player {name}: {achievements}")
+    print()
+
+    all_achievements: set[str] =set()
+    for achievements in players.values():
+        all_achievements = set.union(all_achievements, achievements)
+    print(f"All distinct achievements: {all_achievements}")
+    print()
+
+    common_achievements: set[str] = set(ALL_ACHIEVEMENTS)
+    for achievements in players.values():
+        common_achievements = set.intersection(common_achievements, achievements)
+    print(f"Common achievements: {common_achievements}")
+    print()
+
+    for name, achievements in players.items():
+        others: set[str] = set()
+        for other_name, other_ach in players.items():
+            if other_name != name:
+                others = set.union(others, other_ach)
+        unique = set.difference(achievements, others)
+        print(f"Only {name} has: {unique}")
+
+main()
