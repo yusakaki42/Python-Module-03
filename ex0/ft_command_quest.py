@@ -15,7 +15,6 @@ def main() -> None:
         for i, arg in enumerate(args[1:], start=1):
             print("Argument {i}: {arg}")
 
-
     print("Total arguments: {len(args)}")
 
 

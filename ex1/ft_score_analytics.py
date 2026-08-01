@@ -10,6 +10,7 @@ def parse_scores(args: list[str]) -> list[int]:
             print(f"Invalid parameter: '{arg}'")
     return scores
 
+
 def print_stats(scores: list[int]) -> None:
     print(f"Scores processed: {scores}")
     print(f"Total players: {len(scores)}")
@@ -18,6 +19,7 @@ def print_stats(scores: list[int]) -> None:
     print(f"High score: {max(scores)}")
     print(f"Low score: {min(scores)}")
     print(f"Score range: {max(scores) - min(scores)}")
+
 
 def main() -> None:
     print("=== Player Score Analytics ===")
@@ -39,5 +41,6 @@ def main() -> None:
         return
 
     print_stats(scores)
+
 
 main()
