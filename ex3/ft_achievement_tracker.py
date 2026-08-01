@@ -53,6 +53,12 @@ def main() -> None:
                 others = set.union(others, other_ach)
         unique = set.difference(achievements, others)
         print(f"Only {name} has: {unique}")
+    print()
+
+    full_set = set(ALL_ACHIEVEMENTS)
+    for name, achievements in players.items():
+        missing = set.difference(full_set, achievements)
+        print(f"{name} is missing: {missing}")
 
 
 main()
