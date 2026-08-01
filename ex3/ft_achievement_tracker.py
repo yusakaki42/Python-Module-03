@@ -33,7 +33,7 @@ def main() -> None:
         print(f"Player {name}: {achievements}")
     print()
 
-    all_achievements: set[str] =set()
+    all_achievements: set[str] = set()
     for achievements in players.values():
         all_achievements = set.union(all_achievements, achievements)
     print(f"All distinct achievements: {all_achievements}")
@@ -41,7 +41,8 @@ def main() -> None:
 
     common_achievements: set[str] = set(ALL_ACHIEVEMENTS)
     for achievements in players.values():
-        common_achievements = set.intersection(common_achievements, achievements)
+        common_achievements = set.intersection(
+            common_achievements, achievements)
     print(f"Common achievements: {common_achievements}")
     print()
 
@@ -52,5 +53,6 @@ def main() -> None:
                 others = set.union(others, other_ach)
         unique = set.difference(achievements, others)
         print(f"Only {name} has: {unique}")
+
 
 main()
