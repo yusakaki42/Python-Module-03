@@ -43,4 +43,5 @@ def main() -> None:
     print_stats(scores)
 
 
-main()
+if __name__ == "__main__":
+    main()

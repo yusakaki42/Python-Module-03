@@ -44,4 +44,5 @@ def main() -> None:
         print(f"Remains in list: {event_list}")
 
 
-main()
+if __name__ == "__main__":
+    main()

@@ -27,5 +27,6 @@ def main() -> None:
                    if score > average}
     print(f"High scores: {high_scores}")
 
+
 if __name__ == "__main__":
     main()

@@ -86,4 +86,5 @@ def main() -> None:
     print(f"Updated inventory: {inventory}")
 
 
-main()
+if __name__ == "__main__":
+    main()
