@@ -3,7 +3,7 @@
 import sys
 
 
-def parse_inventory(args: list) -> dict[str, int]:
+def parse_inventory(args: list[str]) -> dict[str, int]:
     inventory: dict[str, int] = {}
 
     for arg in args:
